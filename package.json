@@ -10,17 +10,17 @@
     "name": ""
   },
   "dependencies": {
-    "body-parser": "^1.15.0",
-    "cookie-parser": "^1.4.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
     "debug": "^2.2.0",
-    "ejs": "^2.6.1",
-    "express": "^4.14.0",
-    "express-session": "^1.15.6",
-    "morgan": "^1.7.0",
-    "mysql": "^2.16.0",
-    "passport": "^0.4.0",
+    "ejs": "^2.7.4",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "passport": "^0.4.1",
     "passport-twitter": "^1.0.4",
-    "pug": "^2.0.0-beta6",
+    "pug": "^2.0.4",
     "serve-favicon": "^2.3.0",
     "session-memory-store": "^0.2.2"
   }

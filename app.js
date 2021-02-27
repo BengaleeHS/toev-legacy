@@ -16,10 +16,7 @@ var router = express.Router();
 
 var routes = require('./routes/index');
 var auth = require('./routes/twitterauth');
-var config = require('./config');
-
-var callbackurl = 'https://toev-vote.herokuapp.com/auth/twitter/callback'
-
+var config = require('./config-old');
 
 var app = express();
 
@@ -27,7 +24,7 @@ var pool = mysql.createPool({
     
     connectionLimit: 10,
     host: config.host,
-    user: config.user,
+    user: config.username,
     password: config.password,
     database: config.database
 
@@ -39,10 +36,7 @@ passport.use(new strategy({
     consumerSecret: config.twitterapisecret,
     callbackURL: config.callbackURL
 }, function (token, tokenSecret, profile, done) {
-    process.nextTick(function () {
-
-    });
-    done(null, profile);
+    return done(null, profile);
     }
 ));
 
@@ -60,25 +54,14 @@ app.use(session({
     secret: 'secret',
     id: 'sid',
     store: store,
-    resave: true,
-    saveUninitialized: true
-
+    resave: false,
+    saveUninitialized: false,
 }));
 
 app.use(passport.initialize());
 app.use(passport.session());
 
-var connection = mysql.createConnection({
-    host: config.host,
-    user: config.username,
-    password: config.password,
-    database: config.database,
-    multipleStatements: true,
-});
 
-if (config.use_database == true) {
-    connection.connect();
-}
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -92,9 +75,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/auth/twitter',auth);
-app.use('/', routes);
 
+app.use('/', routes);
+app.use('/auth/twitter',auth);
 router.route('/').post(function (req, res, next) {
     if (req.isAuthenticated()) {
 
@@ -260,7 +243,8 @@ app.use(function (req, res, next) {
 // will print stacktrace
 if (app.get('env') === 'development') {
     app.use(function (err, req, res, next) {
-        res.status(err.status || 500);
+        res.status(err.status);
+        console.error(err.stack);
         res.render('404');
     });
 }
@@ -269,6 +253,7 @@ if (app.get('env') === 'development') {
 // no stacktraces leaked to user
 app.use(function (err, req, res, next) {
     res.status(err.status || 500);
+    
     res.render('404');
 });
 
