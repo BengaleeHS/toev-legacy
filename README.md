@@ -8,7 +8,8 @@ SNS - 트위터 로그인으로 간단한 투표 사이트를 제작하였습니
 <img src="img/beforelogin.png">
 ### 로그인
 <img src="img/logining.png" width="50%"><img src="img/afterlogin.jpg" width="50%">
-다음과 같이 트위터 OAuth2로 로그인하면, 데이터베이스에 저장된 투표가 보입니다. 투표를 생성할 수 있고 최대 6개의 선택지까지 추가 가능합니다.
+다음과 같이 트위터 OAuth2로 로그인하면, 데이터베이스에 저장된 투표가 보입니다. 투표를 생성할 수 있고 최대 6개의 선택지까지 추가 가능합니다.</br>
+올라와 있는 투표는 제가 올린 것이 아닙니다!
 ### 투표
 <img src="img/aftervote.png" width="50%"><img src="img/resultview.png" width="50%">
 투표를 위해 선택지를 고르면, 결과 확인 버튼이 활성화되며, 투표 결과를 볼 수 있습니다.</br>
