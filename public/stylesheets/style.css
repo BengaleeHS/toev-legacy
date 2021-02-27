@@ -1,0 +1,251 @@
+:focus{
+    outline: none;
+}
+button:active{
+    background: #888888;
+}
+button:hover{
+    transition-duration: 0.3s;
+    box-shadow: gray 0px 3px 10px;
+}
+input[type=button]:hover,input[type=submit]:hover {
+    transition-duration: 0.3s;
+    box-shadow: gray 0px 3px 10px;
+}
+input[type=button]:active ,input[type=submit]:active{
+    background: #888888;
+}
+
+input[type=button].sel{
+    background:rgb(166, 250, 208);
+    color: black;
+    border: none;
+    display: inline;
+    border-radius: 15px;
+    margin: 3px 3px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    width:12em;
+    text-align:center;
+}
+
+label, p, #title{
+    font-family: 'Nanum Gothic';
+}
+
+nav{
+    height: auto;
+    background: whitesmoke;
+    border: none;
+    position: fixed;
+    margin: 0;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    transition: 0.5s;
+}
+nav input{
+    background: whitesmoke;
+    color: black;
+    border: solid gray 1px;
+    border-radius: 25px;
+    width: 100px;
+    height: 40px;
+    border: 3px solid #beb8ff;
+    bottom: 10%;
+    padding: auto;
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+nav{
+    border-bottom: solid 5px #beb8ff;
+    box-shadow: gray 0px 3px 3px;
+}
+div#title{
+    font-family: 'Nanum Gothic';
+    font-weight: bold;
+    display: inline-block;
+    font-size: 3rem;
+    text-shadow: gray 0px 5px 10px;
+    letter-spacing: 0.5em;
+    padding: 10px;
+}
+div{
+    text-align: center;
+    transition-duration:0.5s;
+}
+textarea#context{
+    margin: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: 'Nanum Gothic';
+    width: 75%;
+    border: dashed 1px black;
+}
+div#frm, div.container{
+    width: 50%;
+    background: whitesmoke;
+    border-radius: 75px;
+    margin: 20px auto;
+    padding: 10px; 
+    box-shadow: gray 0px 3px 10px;
+    text-align: center;
+}
+div#frm{
+    border-top-color: #beb8ff;
+    border-bottom-color: #beb8ff;
+    border-right-color: whitesmoke;
+    border-left-color: whitesmoke;
+    border-width: 3px;
+    box-sizing: border-box;
+    border-style: solid;
+}
+
+.selection{
+    text-align: center;
+    font-family: 'Nanum Gothic';
+    margin: 10px auto;
+    width: 75%;
+    display: inline;
+    border-radius: 5px;
+    border: dashed 1px black;
+}
+#submit{
+    display: block;
+    font-weight: 700;
+    border-radius: 10px;
+    border:none;
+    background: rgb(127 ,255,128);
+    color: black;
+    margin: 0 auto;
+    width: 30%;
+    padding: 5px;
+}
+#minus{
+    display: inline;
+    font-weight: 700;
+    border-radius: 10px;
+    border:none;
+    background: rgb(255 ,128,128);
+    color: white;
+    padding: 5px;
+}
+#plus{
+    background: rgb(127, 127, 255);
+    color: white;
+    border: none;
+    display: inline;
+    font-weight: 700;
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 5px;
+}
+label{
+    display: block;
+    margin: 0;
+}
+label[for="allow"]{
+    display: inline;
+}
+p{
+    margin: 0;
+}
+
+input.result{
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 200px;
+    word-wrap: break-word;
+    white-space: normal;
+    border-radius: 25px;
+    padding: 5px;
+background: #888888;
+color: aliceblue;
+    border: white;
+}
+
+
+p.buttondiv{
+    display: block;
+}
+div.buttondiv{
+    display: inline-block;
+}
+button{
+    display: block;
+}
+
+input.refresh{
+    position: fixed;
+    bottom: 5%;
+    right:5%;
+    background-color: aliceblue;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2.5rem;
+    box-shadow: gray 0px 3px 5px;
+    border: 3px solid #beb8ff;
+}
+
+
+.votecont{
+    width: 50%;
+    background: whitesmoke;
+    border-radius: 75px;
+    margin: 20px auto;
+    padding: 10px; 
+    box-shadow: gray 0px 3px 10px;
+    text-align: center;
+    border-top-color: #beb8ff;
+    border-bottom-color: #beb8ff;
+    border-right-color: whitesmoke;
+    border-left-color: whitesmoke;
+    border-width: 3px;
+    border-style: solid;
+}
+
+
+nav.hide{
+    top:-30%;
+}
+div#blank{
+    height: 80px;
+}
+@media screen and (max-width:720px)
+{
+    div#frm{
+        width: 90%;
+        background: whitesmoke;
+        border-radius: 75px;
+        margin: 20px auto;
+        padding: 10px; 
+        box-shadow: gray 0px 3px 10px;
+        text-align: center;
+    }
+    div#title{
+        font-family: 'Nanum Gothic';
+        font-weight: bold;
+        display: inline-block;
+        font-size: 2rem;
+        text-shadow: gray 0px 5px 10px;
+        letter-spacing: 0.5em;
+        padding: 10px;
+    }
+    div.votecont{
+        width: 90%;
+        
+    }
+    nav input{
+        margin-top:9px;
+        margin-right: 9px
+    }
+    nav.hide{
+        top:-10%;
+    }
+    div#blank{
+        height: 55px;
+    }
+}
+

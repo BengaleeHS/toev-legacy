@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial scale=1">
+        <title>TOEV</title>
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+        <link rel="stylesheet" href="./stylesheets/style.css" type="text/css">
+    </head>
+    <body>
+    <div id="blank">
+        
+    </div>
+        <nav>
+        
+            <div id="title">
+                <p>TOEV=</p>
+            </div>
+            <input type="button" onclick="location.href='./menu'" value="내 질문">
+        </nav>
+        <form method="post" action="/" >
+            <div id="frm" >
+
+                <label for="context"><strong>질문 내용</strong></label>
+                <textarea name="context" id="context" maxlength="140" required></textarea>
+                <p><strong>선택지</strong></p>
+                <div class="inputcell">
+                    <input type="text" class="selection" maxlength="10" name="selection1" required>
+                    <input type="text" class="selection" maxlength="10" name="selection2" required>
+                </div>
+              
+                
+                <input type="button" id="minus" onclick="delSelection()" value="선택지 지우기">
+                <input type="button" id="plus" onclick="addSelection()" value="선택지 추가하기">
+                <input type="submit" id="submit"  value="제출"  >
+
+            </div>
+        </form>
+		<%if(!auth){%>
+            <p style="text-align : center">투표를 하거나 질문을 보기 위해선 <a href="/auth/twitter">트위터 로그인</a>  이 필요해요</p>
+        <%}%>
+        <div id="votes">
+        
+        
+        
+         
+        </div>
+        <input type="button" name="refresh" value="새로고침" class="refresh" onclick="loadq()">
+    </body>
+</html>
+<script src="./javascripts/app.js"></script>
